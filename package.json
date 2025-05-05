@@ -1,0 +1,22 @@
+{
+  "name": "seal-learner",
+  "version": "1.0.0",
+  "description": "Seal encryption example with Sui Move",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mysten/dapp-kit": "^0.15.0",
+    "@mysten/seal": "^0.4.2",
+    "@mysten/sui": "^1.29.1",
+    "@types/node": "^20.17.32",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
