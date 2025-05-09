@@ -1,72 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --elegant-bg: #ffffff;
+  --elegant-panel: #f8f8f8;
+  --elegant-text: #1a1a1a;
+  --elegant-border: #e0e0e0;
+  --elegant-accent: #333333;
+  --elegant-hover: #4a4a4a;
+  --elegant-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --elegant-spacing: 1.5rem;
+
+  font-family: 'Source Serif Pro', serif;
+  line-height: 1.6;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: var(--elegant-text);
+  background-color: var(--elegant-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  background: var(--elegant-bg);
+  color: var(--elegant-text);
+  min-height: 100vh;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: var(--elegant-spacing);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  color: var(--elegant-accent);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background: var(--elegant-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem 0;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.2s ease;
+  box-shadow: var(--elegant-shadow);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+button:hover {
+  background: var(--elegant-hover);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+input, textarea {
+  background: white;
+  color: var(--elegant-text);
+  border: 1px solid var(--elegant-border);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Source Serif Pro', serif;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--elegant-accent);
+}
+
+.cyber-panel {
+  background: var(--elegant-panel);
+  border: 1px solid var(--elegant-border);
+  border-radius: 8px;
+  box-shadow: var(--elegant-shadow);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+pre, code {
+  background: #f5f5f5;
+  color: var(--elegant-accent);
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 0.9rem;
+  border: 1px solid var(--elegant-border);
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 1rem 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--elegant-panel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--elegant-accent);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .cyber-panel {
+    padding: 1.5rem;
+    margin: 1rem;
   }
-  a:hover {
-    color: #747bff;
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
   }
+  
   button {
-    background-color: #f9f9f9;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  input, textarea {
+    font-size: 1rem;
   }
 }

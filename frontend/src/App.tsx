@@ -13,12 +13,16 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networks} defaultNetwork="testnet">
         <WalletProvider>
-          <div className="container mx-auto p-4">
-            <div className="flex justify-end mb-4">
-              <ConnectButton />
-      </div>
-            <SealEncryption />
-      </div>
+          <div className="min-h-screen flex flex-col items-center justify-start bg-transparent">
+            <div className="w-full flex justify-center pt-8 pb-6 sm:pb-10">
+              <div className="cyber-border-anim px-4 py-2" style={{maxWidth: 340}}>
+                <ConnectButton className="w-full text-lg" />
+              </div>
+            </div>
+            <div className="w-full flex justify-center px-2">
+              <SealEncryption />
+            </div>
+          </div>
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>
