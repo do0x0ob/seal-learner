@@ -11,7 +11,7 @@
 
 1. 克隆專案：
 ```bash
-git clone https://github.com/yourusername/seal-learner.git
+git clone https://github.com/do0x0ob/seal-learner.git
 cd seal-learner
 ```
 
