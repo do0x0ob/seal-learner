@@ -22,7 +22,7 @@ npm install
 
 ## 使用方法
 
-### Seal CLI 工具安裝
+### Seal CLI 工具安裝(非必須)
 
 您可以使用 Rust 的 cargo 工具安裝 seal-cli：
 
